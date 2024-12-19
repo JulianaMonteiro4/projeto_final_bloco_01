@@ -1,5 +1,8 @@
 package projeto_final_bloco_01;
 
+import restaurante.model.Restaurante;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
@@ -27,7 +30,14 @@ public class Menu {
 			System.out.println("                                   ");
 			System.out.println("***********************************");
 			System.out.println("Digite a opção desejada:           ");
-			opcao = leia.nextInt();
+			
+			try {
+				opcao = leia.nextInt();
+			}catch (InputMismatchException e) {
+				System.out.println("\nDigite um número inteiro");
+				leia.nextLine();
+				opcao = 0;
+			}
 			
 			switch(opcao) {
 				case 1:
@@ -40,7 +50,6 @@ public class Menu {
 					System.out.println("   4 - Hot Holl          ");
 					System.out.println("   5 - Yakisoba          ");
 					System.out.println("                         ");
-					System.out.println("*************************");
 				break;
 				case 2:
 					System.out.println("Adicionar produto");
