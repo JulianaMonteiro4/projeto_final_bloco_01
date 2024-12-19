@@ -18,10 +18,11 @@ public class Menu {
 			System.out.println("                                   ");
 			System.out.println("***********************************");
 			System.out.println("                                   ");
-			System.out.println("   1 - Adicionar produto           ");
-			System.out.println("   2 - Listar todas os produtos    ");
-			System.out.println("   3 - Atualizar produtos          ");
-			System.out.println("   4 - Apagar produto              ");
+			System.out.println("   1 - Mostrar Cardápio            ");
+			System.out.println("   2 - Adicionar produto           ");
+			System.out.println("   3 - Listar todas os produtos    ");
+			System.out.println("   4 - Atualizar produtos          ");
+			System.out.println("   5 - Apagar produto              ");
 			System.out.println("   0 - Sair                        ");
 			System.out.println("                                   ");
 			System.out.println("***********************************");
@@ -30,16 +31,28 @@ public class Menu {
 			
 			switch(opcao) {
 				case 1:
+					System.out.println("     Mostrar Cardápio    ");
+					System.out.println("*************************");
+					System.out.println("                         ");
+					System.out.println("   1 - Temaki            ");
+					System.out.println("   2 - Sashimi           ");
+					System.out.println("   3 - Sushi             ");
+					System.out.println("   4 - Hot Holl          ");
+					System.out.println("   5 - Yakisoba          ");
+					System.out.println("                         ");
+					System.out.println("*************************");
+				break;
+				case 2:
 					System.out.println("Adicionar produto");
 					produto = leia.next();
 				break;
-				case 2:
+				case 3:
 					System.out.println("Listar todas os produtos");
 				break;
-				case 3:
+				case 4:
 					System.out.println("Atualizar produtos");
 				break;
-				case 4:
+				case 5:
 					System.out.println("Apagar produto");
 				break;
 				case 0:
