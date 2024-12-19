@@ -3,16 +3,18 @@ package pratos;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-//import pratos.model.Pratos;
+//import pratos.model.PratoTradicional;
 import pratos.controller.PratosController;
 
 public class Menu {
 
 	public static void main(String[] args) {
 		
-		
 		int opcao = 1;
-		int produto, quantidade, valorTotal;
+		int produto, quantidade, valorTotal, pergunta;
+		String adicional;
+		
+		
 		
 		Scanner leia = new Scanner(System.in);
 		PratosController pratos = new PratosController();
@@ -44,8 +46,8 @@ public class Menu {
 			
 			switch(opcao) {
 				case 1:
-					System.out.println("     Mostrar Cardápio    ");
-					System.out.println("*************************");
+					System.out.println("          Mostrar Cardápio         ");
+					System.out.println("***********************************");
 					System.out.println("                         ");
 					System.out.println("   1 - Temaki - R$ 15,00 ");
 					System.out.println("   2 - Sashimi -R$ 5,00  ");
@@ -80,6 +82,23 @@ public class Menu {
 					case 5:
 						valorTotal = quantidade* 15;
 						System.out.println("Valor total desse pedido: " + valorTotal);
+						break;
+					}
+					
+					System.out.println("Quer algum adicional? Digite 1 para adicionar e 2 para continuar");
+					pergunta = leia.nextInt();
+					
+					switch (pergunta) {
+					case 1:
+						if(pergunta == 1) {
+							System.out.println("Digite o que deseja a mais: ");
+							adicional = leia.next();
+							
+							System.out.println(adicional + " foi adicionado com sucesso");
+						}
+						break;
+					case 2:
+						System.out.println("continuar...");
 						break;
 					}
 				break;
